@@ -1,38 +1,34 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="pongCanavas.css">
-    <link rel="stylesheet" href="Navbar.css">
-</head>
-<body id="body">
+<!DOCTYPE HTML>
+<html lang="de">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="Projects/pong.css"/>
+		<link rel="stylesheet" href="css/Navbar.css">
+	</head>
+<body>
+	<div class="menu-btn">
+		<div id="navcontent" class="navcontent"></div>
+		<div class="menu-btn__burger"></div>
+	</div>
+	  
+	  <div id="links" class="links">
+		<a href="index.html">Home</a>
+		<a href="3DPrinting.html">3D Druck</a>
+		<a href="pong.html">Game</a>
+		<a href="#">Meine AG</a>
+		<a href="#">Impressum</a>
+	  </div>
 
-  <div class="menu-btn">
-    <div id="navcontent" class="navcontent"></div>
-    <div class="menu-btn__burger"></div>
-  </div>
-      
-  <div id="links" class="links">
-    <a href="index.html">Home</a>
-    <a href="pong.html">Game</a>
-    <a href="#">Meine AG</a>
-    <a href="#">Impressum</a>
-  </div>
-      
-    <script src="nav.js"></script>
-    
-    <center>
-      <canvas onclick="fullscreen()" id="pongCover" class="pongCover" height="500px"
-      width="1000px" style="background-color: black;"></canvas>
-    </center>
+	  <center>
+		<img src="files/pong-cover.svg" alt="Pong Cover" class="pongCover" onclick="pongModal.style.display = 'block'; modalButton.style.float= 'right'; pongModal.focus(); startgame();">
+	  </center>
 
-    <div class="fullscreenPong" id="fullscreenPong">
-      <canvas id="pong" class="pong" height="500px"
-      width="1000px" style="background-color: black;"></canvas>
-    </div>
-
+	<div id="pong-modal" class="modal" tabindex="-1">
+		<button id="modalButton" class="modalButton" onclick="stopgame(); pongModal.style.display = 'none';">×</button>
+		<canvas id="pong" class="pong" width="1000" height="500"></canvas>
+	</div>
 </body>
-<script src="pong.js"></script>
-<script src="pongCover.js"></script>
+	<script src="Projects/pong.js" type="text/javascript"></script>
+	<script src="files/nav.js"></script>
 </html>

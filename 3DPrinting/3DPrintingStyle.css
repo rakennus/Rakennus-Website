@@ -1,0 +1,43 @@
+.text{
+    font-family: 'Roboto Mono', monospace;
+    width: 50%;
+    margin-left: 10%;
+    font-size: 1.1rem;
+}
+
+.head{
+    font-size: 2rem;
+}
+
+.TextNav3DPrinting{
+    position: fixed;
+    right: 0;
+    height: 100%;
+    top: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.HyperLinks{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style-type: none;
+    text-align: center;
+}
+
+.HyperLinks a{
+    color: black;
+    text-decoration: none;
+}
+
+.HyperLinks li{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgb(230, 230, 230);
+    border-radius: 2rem;
+    box-shadow: 0 0 5px black;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
