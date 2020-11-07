@@ -7,14 +7,14 @@ menuBtn.addEventListener('click', () => {
   if(!menuOpen) {
     menuBtn.classList.add('open');
     menuOpen = true;
-    document.getElementById("navcontent").style.scale = "60";
+    document.getElementById("navcontent").style.transform = "scale(60)";
     setTimeout(showlinks, 400);
     document.getElementById("navcontent").style.backgroundColor = "rgb(230, 230, 230)";
   } else {
     menuBtn.classList.remove('open');
     menuOpen = false;
     setTimeout(hidelinks, 300);
-    document.getElementById("navcontent").style.scale = "1.4";
+    document.getElementById("navcontent").style.transform = "scale(1.4)";
     document.getElementById("navcontent").style.backgroundColor = "white";
   } 
 });
