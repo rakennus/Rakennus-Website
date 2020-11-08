@@ -1,43 +1,119 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .text{
     font-family: 'Roboto Mono', monospace;
-    width: 50%;
-    margin-left: 10%;
+    width: 100%;
+    margin-left: 0;
     font-size: 1.1rem;
 }
 
 .head{
-    font-size: 2rem;
+    font-size: 5rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0;
+}
+.ListHead{
+    font-size: 1.5rem;
 }
 
-.TextNav3DPrinting{
-    position: fixed;
-    right: 0;
-    height: 100%;
-    top: 0;
-    font-family: 'Roboto Mono', monospace;
-}
-
-.HyperLinks{
-    position: relative;
+#TextNav3DPrinting {
+    width: 14rem;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    list-style-type: none;
-    text-align: center;
-}
-
-.HyperLinks a{
-    color: black;
-    text-decoration: none;
-}
-
-.HyperLinks li{
+    position: fixed;
+    right: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    }
+    #TextNav3DPrinting ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    #TextNav3DPrinting li {
     margin: 1rem;
-    padding: 1rem;
-    background-color: rgb(230, 230, 230);
+    }
+    #TextNav3DPrinting li a:link, #navigation li a:visited {
+    display: block;
+    padding: 0.6rem;
+    background-color: rgba(0, 0, 0, 0.1 );
     border-radius: 2rem;
-    box-shadow: 0 0 5px black;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    #TextNav3DPrinting li a{
+        color: black;
+        text-align: center;
+    }
+
+.Printings{
+    width: 100%;
+    border-bottom: solid 1px black;
+}
+
+.WasIst3DDruck, .DieVerschiedenenDruckverfahren, .SLA{
+    padding-left: 7%;
+}
+.WieFunktioniertEin3DDrucker, .FDM, .SLS{
+    position: relative;
+    width: 90%;
+    padding-left: 7%;
+    padding-top: 5rem;
+    margin-top: 10rem;
+    padding-bottom: 5rem;
+}
+.background1{
+    background-color: rgb(240, 245, 255);
+    position: absolute;
+    top: 0;
+    left: 15%;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+.background2{
+    background-color: rgb(255, 254, 248);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    z-index: -3;
+}
+.FDMPrinterImage{
+    width: 40%;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    z-index: -1;
+}
+.FDMPrinterImageText{
+    font-weight: 300;
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 10%    ;
+    right: 38.5%;
+}
+
+.ChamberImage{
+    width: 40%;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    z-index: -1;
+}
+.ChamberImageText{
+    font-weight: 300;
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 15%    ;
+    right: 38.5%;
+}
+
+.ArticleText{
+    width: 50%;
 }
