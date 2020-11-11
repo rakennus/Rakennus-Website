@@ -84,13 +84,13 @@ html{
     z-index: -2;
 }
 .background2{
-    background-color: rgb(255, 254, 248);
+    background-color: rgba(254, 255, 195, 0.5);
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    width: 15%;
-    z-index: -3;
+    width: 110%;
+    z-index: -2;
 }
 .FDMPrinterImage{
     width: 40%;
