@@ -104,13 +104,14 @@ html{
     writing-mode: vertical-lr;
     position: absolute;
     top: 10%    ;
-    right: 38.5%;
+    right: 40%;
+    margin: 0;
 }
 
 .ChamberImage{
     width: 40%;
     position: absolute;
-    top: 15%;
+    top: 2%;
     right: 0;
     z-index: -1;
 }
@@ -118,8 +119,9 @@ html{
     font-weight: 300;
     writing-mode: vertical-lr;
     position: absolute;
-    top: 15%    ;
-    right: 38.5%;
+    top: 2%;
+    right: 40%;
+    margin: 0;
 }
 
 .ArticleText{
