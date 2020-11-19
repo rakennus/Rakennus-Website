@@ -1,6 +1,8 @@
 var pongModal = document.getElementById("pong-modal");
 var mouseY;
+var touchY;
 var mouseDown = false;
+var touchDown = false;
 var canvas = document.getElementById("pong");
 var ctx = canvas.getContext("2d");
 var upPressed = false;
@@ -29,6 +31,7 @@ var color = "white"
 var colorChangeTimes = 0;
 
 var goal = false;
+var tick = 0;
 
 function limit(val, min, max) {
 	if(val < min)
@@ -93,14 +96,16 @@ function ball() {
 
 function drawPoints_player1() {
 	ctx.font = "128px Arial";
-	ctx.fillStyle = "white"
-	ctx.fillText(points_player1, 160, 120)
+	ctx.fillStyle = "white";
+	ctx.textAlign = "start";
+	ctx.fillText(points_player1, 160, 120);
 }
 
 function drawPoints_player2() {
 	ctx.font = "128px Arial";
-	ctx.fillStyle = "white"
-	ctx.fillText(points_player2, 760, 120)
+	ctx.fillStyle = "white";
+	ctx.textAlign = "end";
+	ctx.fillText(points_player2, 835, 120);
 }
 
 pongModal.addEventListener("keydown", keyDownHandler, false);
@@ -108,6 +113,9 @@ pongModal.addEventListener("keyup", keyUpHandler, false);
 pongModal.addEventListener("mousedown", mouseDownHandler, false);
 pongModal.addEventListener("mousemove", mouseMoveHandler, false);
 pongModal.addEventListener("mouseup", mouseUpHandler, false);
+pongModal.addEventListener("touchstart", touchDownHandler, false);
+pongModal.addEventListener("touchmove", touchMoveHandler, false);
+pongModal.addEventListener("touchend", touchUpHandler, false);
 
 function keyDownHandler(e) {
 	if(e.key == "Up" || e.key == "ArrowUp")
@@ -137,6 +145,23 @@ function mouseMoveHandler(e) {
 
 function mouseUpHandler(e) {
 	mouseDown = false;
+}
+
+function touchDownHandler(e) {
+	touchY = e.changedTouches[0].clientY;
+	touchDown = true;
+}
+
+function touchMoveHandler(e) {
+	e.preventDefault();
+	if(touchDown) {
+		player1_y = limit((player1_y + (e.changedTouches[0].clientY - touchY) * 410 / canvas.clientHeight), 0, 410);
+		touchY = e.changedTouches[0].clientY;
+	}
+}
+
+function touchUpHandler(e) {
+	touchDown = false;
 }
 
 function collisionDetection() {
@@ -217,9 +242,13 @@ function update() {
 			player2_y -= AiSpeed;
 	}
 
-	if(goal == true)
-		color = (color == "black" ? "white" : "black");
-
+	if(goal == true) {
+		if(tick > 5) {
+			color = (color == "black" ? "white" : "black");
+			tick = 0;
+		}
+		tick++;
+	}
 	ball_x += dx;
 	ball_y += dy;
 }

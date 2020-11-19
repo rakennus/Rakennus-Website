@@ -1,13 +1,3 @@
-/*.filter{
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: rgba(255, 243, 82, 0.0);
-    z-index: 1;
-}*/
-
 html{
     scroll-behavior: smooth;
 }
@@ -59,12 +49,13 @@ html{
     }
 
 .Printings{
-    width: 100%;
-    border-bottom: solid 1px black;
+    width: 86%;
+    box-shadow: 0 0 0.2rem black;
 }
 
 .WasIst3DDruck, .DieVerschiedenenDruckverfahren, .SLA{
     padding-left: 7%;
+    z-index: -1;
 }
 .WieFunktioniertEin3DDrucker, .FDM, .SLS{
     position: relative;
@@ -72,10 +63,11 @@ html{
     padding-left: 7%;
     padding-top: 5rem;
     margin-top: 10rem;
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
+    z-index: -1;
 }
 .background1{
-    background-color: #f3f5fd;
+    background-color: rgba(240, 237, 250, 0.5);
     position: absolute;
     top: 0;
     left: 15%;
@@ -84,15 +76,15 @@ html{
     z-index: -2;
 }
 .background2{
-    background-color: rgba(254, 255, 195, 0.5);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 110%;
-    z-index: -2;
+    z-index: -3;
 }
-.FDMPrinterImage{
+/*.FDMPrinterImage{
     width: 40%;
     position: absolute;
     top: 10%;
@@ -111,7 +103,7 @@ html{
 .ChamberImage{
     width: 40%;
     position: absolute;
-    top: 2%;
+    top: 0;
     right: 0;
     z-index: -1;
 }
@@ -122,8 +114,8 @@ html{
     top: 2%;
     right: 40%;
     margin: 0;
-}
+}*/
 
 .ArticleText{
-    width: 50%;
+    width: 60%;
 }
