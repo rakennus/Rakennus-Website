@@ -1,0 +1,59 @@
+#Cover{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(183, 174, 212, 0.502);
+}
+#Cover p{
+    text-align: center;
+    position: relative;
+    margin: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 10rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}
+
+#projects{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -2;
+}
+#projects a{
+    text-decoration: none;
+}
+.project{
+    display: block;
+    height: 10rem;
+    width: 40rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 10%;
+    cursor: pointer;
+    transition: 200ms;
+    border-left: inset 1px black;
+}
+.project:hover{
+    background-color: rgb(230, 230, 230);
+}
+.head{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    margin: 0;
+    color: black;
+    text-decoration: black;
+}
+.ProjectInformations{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    color: black;
+}

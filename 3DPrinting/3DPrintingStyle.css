@@ -2,6 +2,25 @@ html{
     scroll-behavior: smooth;
 }
 
+#Cover{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(183, 174, 212, 0.502);
+}
+#Cover p{
+    text-align: center;
+    position: relative;
+    margin: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 10rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}
+
 .text{
     font-family: 'Roboto Mono', monospace;
     width: 100%;
@@ -18,40 +37,35 @@ html{
     font-size: 1.5rem;
 }
 
-#TextNav3DPrinting {
-    width: 6rem;
-    top: 50%;
-    right: 0.5rem;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    position: fixed;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 200;
+    .TextNav3DPrinting{
+        position: absolute;
+        width: 5rem;
+        right: 0;
+        top: 150%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
-    #TextNav3DPrinting ul {
-    list-style: none;
+    #TextNav3DPrinting a{
+        display: block;
+        text-decoration: none;
+        font-family: 'Roboto Mono', monospace;
+        color: black;
+        border: inset black 2px;
+        width: 3rem;
+        transform: translateX(1rem);
+        transition: 100ms;
+        padding: 0.6rem;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+        margin-top: 0.5rem;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.692);
     }
-    #TextNav3DPrinting li {
-    margin-top: 1rem;
+    #TextNav3DPrinting a:hover{
+        transform: translateX(0rem);
+        width: 4rem;
     }
-    #TextNav3DPrinting li a:link, #navigation li a:visited {
-    display: block;
-    padding: 0.6rem;
-    background-color: rgba(255, 254, 248, 0.7);
-    border-radius: 2rem;
-    text-decoration: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    }
-    #TextNav3DPrinting li a{
-    color: black;
-    text-align: center;
-    }
-
-.Printings{
-    width: 86%;
-    box-shadow: 0 0 0.2rem black;
-}
 
 .WasIst3DDruck, .DieVerschiedenenDruckverfahren, .SLA{
     padding-left: 7%;
@@ -60,62 +74,40 @@ html{
 .WieFunktioniertEin3DDrucker, .FDM, .SLS{
     position: relative;
     width: 90%;
-    padding-left: 7%;
+    padding-left: 20%;
     padding-top: 5rem;
     margin-top: 10rem;
     padding-bottom: 7rem;
     z-index: -1;
 }
 .background1{
-    background-color: rgba(240, 237, 250, 0.5);
+    background-color: rgba(183, 174, 212, 0.502);
     position: absolute;
     top: 0;
-    left: 15%;
+    right: 0;
     height: 100%;
-    width: 100%;
+    width: 85%;
     z-index: -2;
 }
-.background2{
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 110%;
-    z-index: -3;
-}
-/*.FDMPrinterImage{
-    width: 40%;
-    position: absolute;
-    top: 10%;
-    right: 0;
-    z-index: -1;
-}
-.FDMPrinterImageText{
-    font-weight: 300;
-    writing-mode: vertical-lr;
-    position: absolute;
-    top: 10%    ;
-    right: 40%;
-    margin: 0;
-}
 
-.ChamberImage{
-    width: 40%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-}
-.ChamberImageText{
-    font-weight: 300;
-    writing-mode: vertical-lr;
-    position: absolute;
-    top: 2%;
-    right: 40%;
-    margin: 0;
-}*/
-
-.ArticleText{
+.ArticleText, .ArticleText2{
     width: 60%;
+}
+
+.Navigations{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.sticky{
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#Top{
+    position: absolute;
+    top: 0;
 }
