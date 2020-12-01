@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="stylesheet" type="text/css" href="pong.css"/>
+		<link rel="stylesheet" type="text/css" href="9ong.css"/>
 		<link rel="stylesheet" href="../../css/Navbar.css">
 	</head>
 <body>
@@ -20,13 +20,15 @@
 		<a href="#">Impressum</a>
 	  </div>
 
+	  
+
 	  <center>
-		<img src="pong-cover.svg" alt="Pong Cover" class="pongCover" onclick="pongModal.style.display = 'block'; modalButton.style.float= 'right'; pongModal.focus(); startgame();">
+		<img src="9ong-cover.svg" alt="9ong Cover" class="qongCover" onclick="qongModal.style.display = 'block'; modalButton.style.float= 'right'; qongModal.focus(); startgame();">
 	  </center>
 
-	<div id="pong-modal" class="modal" tabindex="-1">
-		<button id="modalButton" class="modalButton" onclick="stopgame(); pongModal.style.display = 'none';">×</button>
-		<canvas id="pong" class="pong" width="1000" height="500"></canvas>
+	<div id="qong-modal" class="modal" tabindex="-1">
+		<button id="modalButton" class="modalButton" onclick="stopgame(); qongModal.style.display = 'none';">×</button>
+		<canvas id="qong" class="qong" width="1000" height="500"></canvas>
 	</div>
 </body>
 	<script src="9ong.js" type="text/javascript"></script>

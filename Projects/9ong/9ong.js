@@ -1,9 +1,9 @@
-var pongModal = document.getElementById("pong-modal");
+var qongModal = document.getElementById("qong-modal");
 var mouseY;
 var touchY;
 var mouseDown = false;
 var touchDown = false;
-var canvas = document.getElementById("pong");
+var canvas = document.getElementById("qong");
 var ctx = canvas.getContext("2d");
 var upPressed = false;
 var downPressed = false;
@@ -108,14 +108,14 @@ function drawPoints_player2() {
 	ctx.fillText(points_player2, 835, 120);
 }
 
-pongModal.addEventListener("keydown", keyDownHandler, false);
-pongModal.addEventListener("keyup", keyUpHandler, false);
-pongModal.addEventListener("mousedown", mouseDownHandler, false);
-pongModal.addEventListener("mousemove", mouseMoveHandler, false);
-pongModal.addEventListener("mouseup", mouseUpHandler, false);
-pongModal.addEventListener("touchstart", touchDownHandler, false);
-pongModal.addEventListener("touchmove", touchMoveHandler, false);
-pongModal.addEventListener("touchend", touchUpHandler, false);
+qongModal.addEventListener("keydown", keyDownHandler, false);
+qongModal.addEventListener("keyup", keyUpHandler, false);
+qongModal.addEventListener("mousedown", mouseDownHandler, false);
+qongModal.addEventListener("mousemove", mouseMoveHandler, false);
+qongModal.addEventListener("mouseup", mouseUpHandler, false);
+qongModal.addEventListener("touchstart", touchDownHandler, false);
+qongModal.addEventListener("touchmove", touchMoveHandler, false);
+qongModal.addEventListener("touchend", touchUpHandler, false);
 
 function keyDownHandler(e) {
 	if(e.key == "Up" || e.key == "ArrowUp")
